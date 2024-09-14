@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+
+      :root{
+        --first-color: #df5441;
+        --second-color: #363636;
+        --third-color: #787878;
+        --white: #e8e8e8;
+        --shadow: 0px 0px 30px rgba(0,0,0,0.50);
+      }
+
+      *{
+        font-family: montserrat;
+        font-weight: 700;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+
+      body{
+        background-color: var(--white);
+      }
+
+      .pricing-container{
+        height: 98.2vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .pricing-plan{
+        box-shadow: var(--shadow);
+        border-radius: 10px;
+        height: 400px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.20s ease-in-out;
+        background-color: var(--second-color);
+        color: var(--white);
+        position: relative;
+      }
+
+      .pricing-plan:hover{
+        width: 320px;
+      }
+
+      button{
+        min-width: 215px;
+        border-radius: 5px;
+        height: 40.5px;
+        border: 1px solid var(--second-color);
+        background-color: var(--second-color);
+        color: var(--white);
+        cursor: pointer;
+        transition: all 0.20s ease-in-out;
+      }
+
+      button:hover{
+        background-color: var(--first-color);
+        color: var(--white);
+        border-color: var(--first-color);
+      }
+
+      .button-container{
+        width: 100%;
+      }
+
+      .benefits-container{
+        width: 100%;
+        height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .tag{
+        width: 120px;
+        height: 25px;
+        position: absolute;
+        z-index: 1;
+        top: 6.5rem;
+        right: 1.1rem;
+        background-color: var(--second-color);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--white);
+      }
+
+      .tag > p{
+        font-size: 12px;
+        color: var(--white);
+        margin: 0;
+      }
+
+      li{
+        list-style: none;
+        font-weight: 700;
+        color: var(--first-color);
+        height: 40px;
+        width: 100%;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: 2px solid var(--white);
+        background-color: var(--white);
+      }
+
+      .list-container{
+        width: 175px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        background-color: var(--first-color);
+        border-radius: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .price-description{
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .plan-title{
+        font-size: 25px;
+      }
+
+      .plan-price{
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+      .plan-list{
+        flex: 2.5;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: var(--white);
+        color: var(--second-color);
+        align-items: center;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1200px) {
+        .pricing-container{
+          flex-direction: column;
+          height: 100%;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="pricing-container">
+
+      <div class="pricing-plan">
+
+        <div class="tag">
+
+          <p>50% discount</p>
+
+        </div>
+
+        <div class="price-description">
+
+          <div class="plan-title">Basic</div>
+
+          <div class="plan-price">$9.99/month</div>
+
+        </div>
+
+          <div class="plan-list">
+
+            <div class="benefits-container">
+
+              <div class="list-container">
+
+                <li>10 GB Storage</li>
+                <li>1 User</li>
+                <li>Support</li>
+
+              </div>
+
+            </div>
+
+            <div class="button-container">
+
+              <button class="plan-button" title="Sign-up">Sign Up</button>
+
+            </div>
+          
+          </div>
+       
+      </div>
+
+      <div class="pricing-plan">
+
+        <div class="tag">
+
+          <p>20% discount</p>
+
+        </div>
+
+        <div class="price-description">
+
+          <div class="plan-title">Standard</div>
+
+          <div class="plan-price">$19.99/month</div>
+          
+        </div>
+
+          <div class="plan-list">
+
+            <div class="benefits-container">
+
+              <div class="list-container">
+        
+                <li>50 GB Storage</li>
+                <li>5 Users</li>
+                <li>Phone &amp; Email Support</li>
+
+              </div>
+
+            </div>
+        
+            <div class="button-container">
+
+              <button class="plan-button" title="Sign-up">Sign Up</button>
+
+            </div>
+
+          </div>
+  
+      </div>
+
+      <div class="pricing-plan">
+
+        <div class="tag">
+
+          <p>5% discount</p>
+
+        </div>
+
+        <div class="price-description">
+
+          <div class="plan-title">Premium</div>
+
+          <div class="plan-price">$49.99/month</div>  
+          
+        </div>
+
+          <div class="plan-list">
+
+            <div class="benefits-container">
+
+              <div class="list-container">
+        
+                <li>100 GB Storage</li>
+                <li>10 Users</li>
+                <li>24/7 Support</li>
+
+              </div>
+
+            </div>
+          
+            <div class="button-container">
+
+              <button class="plan-button" title="Sign-up">Sign Up</button>
+
+            </div>
+
+          </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
